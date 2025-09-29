@@ -1,0 +1,378 @@
+/* --- 1. IMPORT FONT & BIẾN TOÀN CỤC (VARIABLES) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --danger-color: #e74c3c;
+  --danger-hover: #c0392b;
+  --warning-color: #f39c12;
+  --warning-hover: #e67e22;
+  --success-color: #2ecc71;
+  --edit-color: #3498db;
+  --edit-hover: #2980b9;
+
+  --bg-light: #f7f9fc;
+  --bg-white: #ffffff;
+  --border-color: #dee2e6;
+  --text-dark: #34495e;
+  --text-light: #7f8c8d;
+  --navbar-bg: #ffffff;
+
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --border-radius: 8px;
+}
+
+/* --- 2. GLOBAL STYLES --- */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-size: 16px;
+}
+
+main {
+  padding-top: 80px;
+  /* Thêm khoảng trống cho Navbar */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* --- 3. NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 65px;
+  background-color: var(--navbar-bg);
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-links span {
+  color: var(--text-light);
+}
+
+/* --- 4. BUTTONS --- */
+.btn,
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.logout-btn:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: var(--danger-hover);
+}
+
+.edit-btn {
+  background-color: var(--edit-color);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: var(--edit-hover);
+}
+
+
+/* --- 5. FORMS --- */
+.form-container {
+  max-width: 450px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: var(--bg-white);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-container input {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-container button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 1rem;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+.error {
+  color: var(--danger-color);
+  text-align: center;
+  margin-top: 0;
+}
+
+.success {
+  color: var(--success-color);
+  text-align: center;
+  margin-top: 0;
+}
+
+/* --- 6. DEMO LOGIN SECTION --- */
+.demo-login-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.demo-login-section h4 {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.demo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.demo-btn {
+  color: white;
+}
+
+.admin-btn {
+  background-color: var(--warning-color);
+}
+
+.admin-btn:hover {
+  background-color: var(--warning-hover);
+}
+
+.user-btn {
+  background-color: var(--primary-color);
+}
+
+.user-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* --- 7. HOME PAGE & BOOK LIST --- */
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.book-card p {
+  margin: 0.25rem 0;
+  color: var(--text-light);
+  flex-grow: 1;
+}
+
+.book-card button {
+  margin-top: 1rem;
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* --- 8. ADMIN & HISTORY PAGES (TABLES) --- */
+.admin-section {
+  background: var(--bg-white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.add-book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.add-book-form input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.add-book-form button {
+  grid-column: 1 / -1;
+  /* Button spans all columns */
+}
+
+.books-table,
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.books-table th,
+.history-table th {
+  background-color: var(--bg-light);
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.books-table td,
+.history-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.books-table tr:last-child td,
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.books-table td:last-child {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status.borrowed {
+  background-color: var(--warning-color);
+}
+
+.status.returned {
+  background-color: var(--success-color);
+}
