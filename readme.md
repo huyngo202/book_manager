@@ -2,6 +2,8 @@
 
 Một dự án full-stack đơn giản để quản lý thư viện, áp dụng kiến trúc 3 lớp và các công nghệ hiện đại như React, Node.js, Express và MongoDB.
 
+## link deploy: https://book-manager-jet.vercel.app/
+
 ## Mục lục
 
 - [Báo cáo ngắn](#báo-cáo-ngắn)
