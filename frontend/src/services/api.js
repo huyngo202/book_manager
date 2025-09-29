@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const api = axios.create({
     // baseURL: 'http://localhost:5001/api', // URL của backend NodeJS
-    baseURL: 'https://library-api-tjkl.onrender.com',
+    baseURL: 'https://library-api-tjkl.onrender.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
